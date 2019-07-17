@@ -1,0 +1,24 @@
+/* Global Scope
+브레이스 밖의 영역 */
+
+let name: String = "GSThecar"
+let lastName: String = "Lee"
+
+name // GSThecar
+
+
+/* Local Scope
+브레이스 내부의 영역 */
+
+
+func doSomething() {
+    let name: String = "David"
+    let age: Int = 36
+    name            //가장 가까운 name
+    lastName        //안에서 밖으로 접근가능
+    age
+}
+
+doSomething() // David Lee 34
+
+age // 밖에서 안으로 접근 불가
