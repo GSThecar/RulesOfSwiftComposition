@@ -1,6 +1,6 @@
 Let's Study
 =============
 
-Prepare
--------------
-#### Vocabulary
+ Prepare
+ -------------
+  #### [ Vocabulary ]: <https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Vocabulary>
