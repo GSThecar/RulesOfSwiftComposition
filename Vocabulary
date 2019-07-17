@@ -1,0 +1,76 @@
+프로그래밍 용어
+
+Token : 프로그래밍 문법적으로 더이상 쪼개지지 않는 원자같은 최소단위
+예) identifier, keyword, literal, punctuation, operator
+
+Expression : 한개이상의 token모임을 평가(evaluate)하여 결과 도출하는 식
+예) boolean 1 == 2 -> false, integer 1986, string "GSThecar"
+
+Statement : 표현식이 모여 작동함
+
+Literal : 단순하게 생각합시다, 써 있는 그대로
+예)숫자 1986, 문자 "GSThecar"
+
+Identifier : 식별자 (이름이 있으니 누군지 명확하게 알수있음)
+
+Variable : 변경가능(var 변수)
+
+Constant : 고정, 변경불가(let 상수)
+
+Scope : 범위 {} 활동가능 영역을 구분해줌
+
+
+키보드 특수문자
+
+! Exclamation Mark 논리부정(참, 거짓 반대), 옵셔널 강제추출
+
+~ Tilde 비트연산
+
+` Back Tick 키워드를 식별자로 변환
+
+@ At Symbol 코드 특성지정
+
+# Sharp 틀별한명령어
+
+$ Dollar Sign 파라미터 대체
+
+% Percent Sign 평가후 나머지
+
+^ Caret 비트연산
+
+& Ampersand 메모리주소 얻음, 참조전달
+
+* Asterisk 곱셈
+
+( ) Parentheses 함수호출 게산순서
+
+- Hyphen
+
+_ Underscore 
+
+= Equal Sign 값 저장, == 비교
+
++ Plus sign 덧셈
+
+[ ] Square Bracket 컬렉션 값 접근(섭스크립트)
+
+{ } Brace 코드범위지정
+
+\ Backslash 스트링 인터폴레이션, 키패스
+
+| Pipe 논리 비트연산
+
+; Semicolon 문장끝
+
+: Colon 자료형지정, 키와 값 구분
+
+, Comma 나열(구분)
+
+. Period 매소드호출,속성접근
+
+< > Angle Bracket 크기비교, 제네릭형식지정
+
+/ Slash 경로지정
+
+? Question Mark 옵셔널
+
