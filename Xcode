@@ -1,0 +1,26 @@
+Xcode
+
+>IDE(Intergrated Developement Environment) - 통합 계발 환경
+
+>Show live issues의 기능으로 잘못된 문법작성시 즉시 피드백가능
+
+>PlayGround활용: 부분 컴파일 기능으로 콘솔창 및 side result bar에서 확인
+
+>*Simulator* 컴퓨터 안의 핸드폰이있고 앱을 실행해볼 수 있다는 사실.. culture shock!
+
+
+
+Build
+
+>Compile: 프로그래머가 작성한 코드를 컴파일러가 컴퓨터의 언어(Binary)로 변경해줌
+
+ -> 경고, 오류가 발생할 수 있음. 경고는 컴파일 후, 실행가능하나, 오류의경우 컴파일 불가, 수정 필요
+
+>Link: Framework, Library를 연결해줌
+
+>Executeables: 실행가능한 파일생성
+
+ -> 1. Debug Mode: Debug Information포함(큼) / 2. Release Mode: Optimaization(작음)
+
+
+시점에따라 Compile Time, Run Time으로 구분함
