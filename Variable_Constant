@@ -1,0 +1,33 @@
+/*:변수 선언
+ var variableName = initialValue
+*/
+
+var name = "GSThecar"
+var born = 1986
+var valid = true
+
+var x = 0.0, y = 0.0, z = 0.0 // 가능하나, 좋지 못한 방법
+
+//var name = "Mark" ...redeclaration
+name = "Mark"
+name = "David"
+
+var otherName = name
+
+otherName = "Bbo" //copy -> stored in different stack
+
+//year = "2018" ...different type
+
+
+
+
+/*:상수 선언
+ let constantName = initialValue
+*/
+
+let name = "GSThecar"
+
+name
+//name = "Mark" ...immutable
+
+//실수로 값 변경 불가(컴파일시 발견됨) 
