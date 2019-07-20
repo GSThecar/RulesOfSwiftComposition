@@ -1,0 +1,92 @@
+/*:
+# Number Literals
+*/
+
+1_000_000
+1.23e4
+0xAb1
+0b1011
+0o17
+
+/*:
+# Integer Type
+*/
+
+let a: Int = 0
+
+/*:
+# Double & Float Type
+*/
+
+let piDouble: Double = 3.141592653589793238462643383279502884197169
+let piFloat: Float = 3.141592653589793238462643383279502884197169
+
+print(piFloat)  // 3.1415927 (최대 소숫점6번째까지보장)
+print(piDouble) // 3.141592653589793 (최대 소숫점14번째까지보장)
+
+
+/*:
+# Type Inference
+*/
+
+let number = 123 //1. type check 2. value check 3. inference
+type(of: number) //Int.type
+
+let someString = "Good morning"
+type(of: someString) //String.type
+
+let valid1 = true 
+type(of: valid1) //Bool.type
+
+let valid2 = false
+type(of: valid2) //Bool.type
+
+
+/*:
+# Type Inference Rules
+*/
+
+let someFloat = 1.23
+type(of: someFloat) // Double.type
+
+let realFloat: Float = 1.23 
+type(of: realFloat) // Float.type
+
+let someCharacter = "a"
+type(of: someCharacter) // String.type
+
+let realCharacter: Character = "a"
+type(of: realCharacter) // Character
+
+var emptyString = " "
+emptyString.isEmpty //false
+
+emptyString = ""
+emptyString.isEmpty //true
+
+/*:
+# Type Alias
+*/
+
+typealias Name = String  
+
+let personA: Name = "GSThecar"
+let personB: Name = "David"
+let personC: Name = "Mark"
+
+/*:
+# Type's Safety In Swift 
+## Type Conversion
+*/
+
+var oneOfDouble: Double = 3.14
+let oneOfFloats: Float = 3.14
+
+oneOfDouble = oneOfFloats //Different Type
+
+var someScore: Int = 1000
+let myScore: String = "1000"
+ 
+someScore = myScore //Different Type
+someScore = Int(myScore)!
+
