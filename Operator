@@ -1,0 +1,78 @@
+let numberA = 1
+let numberB = 2
+
+/*:
+# Unary Operator 
+*/
+
+-numberA // -1
+
+/*:
+# Binary Operator 
+*/
+
+numberA % numberB // 1
+
+
+let hour = 12
+
+/*:
+# Ternary Conditional Operator 
+*/
+
+
+hour <= 12 ? "Good Morning" : 
+    (hour <= 17 ? "Good Afternoon" : "Good Evening") // Good Morning
+
+
+/*:
+# Range Operator 
+*/
+
+for number in 1 ... 10 {
+    number
+}                        // 1 2 3 4 5 6 7 8 9 10
+
+for number in 1 ..< 10 {
+    number
+}                        // 1 2 3 4 5 6 7 8 9
+
+
+/*:
+# Short_circuit Evaluation 
+*/
+
+var a = 1
+var b = 2
+var c = 1
+
+a = a + b // 3
+
+c += b    // 3
+
+/*:
+# Overflow Operator 
+*/
+
+Int8.max  // 127
+Int8.min  // -128
+
+let number: Int8 = Int8.max
+
+number + 1 // Overflow
+
+var i: Int8 = Int8.max   // 127
+var j: Int8 = i &+ 1     // -128
+
+j == Int8.min            // true
+
+
+i = Int8.min             // -128
+j = i &- 1               // 127
+
+j == Int8.max            // true
+
+let k: Int8 = Int8.max &* 2     // -2
+
+// Int8.max는 127, 2진수로 0b0111_1111
+// 더하면 0b1111_1110 -> (음수표현 2의보수방식) 0b부호000_0001 + 1 -> -2 라고 생각됩니다.
