@@ -47,7 +47,8 @@ var sameColorIndex: Int = 0
 var pairCount: Int = 0
 
 for leftHand in socks {
-    guard socks.count > 1, socks.count > sameColorIndex else { break } //비교 대상이없거나, 인덱스가 초과함을 방지(기존 if문 사용했었음)
+    /*비교 대상이없거나, 인덱스가 초과함을 방지(기존 if문 사용했었음 -> 가독성이 좋아졌으며, 의도가 좀더 명확해짐)*/
+    guard socks.count > 1, socks.count > sameColorIndex else { break }
     socks.removeFirst()
     
     for rightHand in socks {
