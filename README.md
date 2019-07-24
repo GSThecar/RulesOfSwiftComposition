@@ -8,5 +8,6 @@ Let's Study
 ### Step by Step
 >#### [Variable&Constant](https://github.com/GSThecar/RulesOfSwiftComposition/commit/3f443b2934d8a0d4f7603f01cf6296b095b96ef5) / [Data_Type](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Data_Type) / [Operator](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Operator)
 
-### [Conditional Statements](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Conditional%20Statements.md)
+### Do Walk 
+>#### [Conditional Statements](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Conditional%20Statements.md) [Loops](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Loops.md)
 
