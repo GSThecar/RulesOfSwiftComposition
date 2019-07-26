@@ -11,4 +11,4 @@ Hello World!? Try it!
 ### Flutter Kicks 
 >#### [Conditional Statements](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Conditional%20Statements.md)  / [Loops](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Loops.md) / [Optionals](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Optionals.md) / [Functions](https://github.com/GSThecar/RulesOfSwiftComposition/blob/master/Functions.md)
 
-### Jump Into The Sea, Try It~!
+### Jump Into The Sea, Do It~!
