@@ -24,6 +24,7 @@ test2(str: "GSThecar") // Hello GSThecar
 </code></pre>
 
 ### ArgumentLabel: with / Parameter: str
+<pre><code>
 func test2(with str: String) -> String {
 return "Awesome \(str)"
 }
