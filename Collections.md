@@ -1,7 +1,7 @@
 
 # Array Type
 
-## Array<T>, [T]
+## Array< T >, [T]
 
 <pre><code>
 
@@ -55,6 +55,6 @@ words.updateValue("Camera", forKey: "C") // insert + Update -> Upsert
 </code></pre>
 
 
-# Set type
+# Set Type
 
-## Set<T>
+## Set< T >
