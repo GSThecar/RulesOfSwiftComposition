@@ -1,5 +1,5 @@
 
-# Array Type
+# Array Type : 순서가 보장되며 중복된 요소가 있을 수 있다
 
 ## Array< T >, [T]
 
@@ -22,7 +22,7 @@ array2[0] // A
 </code></pre>
 
 
-# Dictionary Type
+# Dictionary Type : Key & Value의 쌍으로 이루어져있다
 
 ## Dictionary<K,V>, [K:V]
 
@@ -55,6 +55,25 @@ words.updateValue("Camera", forKey: "C") // insert + Update -> Upsert
 </code></pre>
 
 
-# Set Type
+# Set Type : 중복없는 요소로 이루어져 있다
 
 ## Set< T >
+
+<pre><code>
+
+let set: Set<Int> = [1, 2, 2, 3, 3, 3]
+
+set.count // 3
+set.isEmpty // false
+set.contains(4) //false
+
+var words = Set<String>() //Set([])
+
+words.insert("Swift") // inserted:true, memberAfterInsert:"Swift"
+words // {"Swift"}
+
+words.insert("Swift") // inserted:false, memberAfterInsert:"Swift"
+words // {"Swift"}
+
+
+</code></pre>
