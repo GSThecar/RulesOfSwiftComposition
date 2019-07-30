@@ -14,7 +14,7 @@ case saturday, sunday
 }
 
 Day.saturday.rawValue // 5
-Day.sunday.rawValue // 6
+Day.sunday.rawValue   // 6
 
 </code></pre>
 
@@ -30,7 +30,7 @@ case subway(lineNumber: Int, express: Bool)
 
 var myTransportation = Transportation.bus(number: 22)  // 22번버스
 
-switch myTransportation {                                                // 22
+switch myTransportation {                              // 22
 case .bus(let n):
 print(n)
 case .taxi(let c, _):
@@ -41,7 +41,7 @@ print(ln, ex)
 
 myTransportation = Transportation.subway(lineNumber: 1, express: true) // 급행 1호선
 
-if case let .subway(1, express) = myTransportation {                                  // 급행열차
+if case let .subway(1, express) = myTransportation {                   // 급행열차
 if express {
 print("급행열차")
 } else {
