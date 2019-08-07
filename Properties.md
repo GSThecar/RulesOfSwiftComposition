@@ -1,3 +1,13 @@
+# Structure or Class, What is your Choice  [[Reference URL]](http://developer.apple.com/documentation/swift/choosing_betwee_structures_and_classes)
+
+## Contents  
+### 1. Basically choose 'struct', It's easy to estimate about a state's changing. 
+### 2. If operating together with Objective-C, use 'class'.
+### 3. Also, When a lot of objects change as the state changes, use 'class'. <br>ex) HardWare Property, Local DataBase...</br>
+### 4. When subject of data isn't in local, use struct (Server) 
+### 5. If wanna make inheritance structure... <br>Ah! Protocol is possible to enum, struct, class, even protocol.</br>
+
+
 
 # Lazy Stored Properties
 
