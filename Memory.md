@@ -20,3 +20,179 @@
 
 </code></pre>
 
+# Automatic Reference Counting
+
+<pre><code>
+
+class Person {
+   var name = "John Doe"
+   
+   deinit {
+      print("person deinit")
+   }
+}
+
+var person1: Person?
+var person2: Person?
+var person3: Person?
+
+person1 = Person()
+person2 = person1
+person3 = person1
+
+person1 = nil
+person2 = nil
+person3 = nil // "person deinit"
+
+</code></pre>
+
+# Strong Reference Cycle
+
+<pre><code>
+
+class Person {
+   var name = "John Doe"
+   var car: Car?
+   
+   deinit {
+      print("person deinit")
+   }
+}
+
+class Car {
+   var model: String
+   var lessee: Person?
+   
+   init(model: String) {
+      self.model = model
+   }
+   
+   deinit {
+      print("car deinit")
+   }
+}
+
+var person: Person? = Person()
+var rentedCar: Car? = Car(model: "Porsche")
+
+person?.car = rentedCar
+rentedCar?.lessee = person
+
+person = nil
+rentedCar = nil
+
+</code></pre>
+
+# Weak Reference
+
+<pre><code>
+
+class Person {
+   var name = "John Doe"
+   var car: Car?
+   
+   deinit {
+      print("person deinit")
+   }
+}
+
+class Car {
+   var model: String
+   weak var lessee: Person?
+   
+   init(model: String) {
+      self.model = model
+   }
+   
+   deinit {
+      print("car deinit")
+   }
+}
+
+var person: Person? = Person()
+var rentedCar: Car? = Car(model: "Porsche")
+
+person?.car = rentedCar
+rentedCar?.lessee = person
+
+person = nil //"person deinit"
+rentedCar = nil //"car deinit"
+
+</code></pre>
+
+# Unowned Reference (Run time)
+
+<pre><code>
+
+class Person {
+   var name = "John Doe"
+   var car: Car?
+   
+   deinit {
+      print("person deinit")
+   }
+}
+
+class Car {
+   var model: String
+   unowned var lessee: Person?
+   
+   init(model: String) {
+      self.model = model
+   }
+   
+   deinit {
+      print("car deinit")
+   }
+}
+
+var person: Person? = Person()
+var rentedCar: Car? = Car(model: "Porsche")
+
+person?.car = rentedCar
+rentedCar?.lessee = person
+
+person = nil
+rentedCar = nil
+
+</code></pre>
+
+# Colosure Capture list
+
+<pre><code>
+
+class Car {
+    var totalDrivingDistance = 0.0
+    var totalUsedGas = 0.0
+    
+    lazy var gasMileage: () -> Double? = { [weak self] in
+        guard let totalDrivingDistance = self?.totalDrivingDistance,
+            let totalUsedGas = self?.totalUsedGas else { return nil }
+        return totalDrivingDistance / totalUsedGas
+    }
+    
+//   lazy var gasMileage: () -> Double? = {
+//    let totalDrivingDistance = self.totalDrivingDistance
+//    let totalUsedGas = self.totalUsedGas
+//        return totalDrivingDistance / totalUsedGas
+//    }
+    
+    func drive() {
+        self.totalDrivingDistance = 1200.0
+        self.totalUsedGas = 73.0
+    }
+    
+    deinit {
+        print("car deinit")
+    }
+}
+
+var myCar: Car? = Car()
+myCar?.drive()
+myCar = nil
+
+myCar = Car()
+myCar?.gasMileage()
+myCar = nil
+
+</code></pre>
