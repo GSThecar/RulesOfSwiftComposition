@@ -1,7 +1,7 @@
 
 # Just do it, again and again
 
-## Let's make 'Filter'
+## Let's make 'filter'
 ### my opnion : Input - Element in container, Estimation Process - Bool, Output - Result of true
 
 
@@ -20,5 +20,24 @@ return temporaryBox
 </code></pre>
 
 
-## Sure. I don't know yet..... Tomorrow again
-###  hm.... i choose 'sorted'
+## Let's make 'sorted'
+### I thought about 'sorted' that swapping according to ordered comparisons
+
+<pre><code>
+
+extension Array {
+    func mySorted(by areIncreasing : (Element,Element) -> Bool ) -> [Element] {
+        var temporarybox: [Element] = self
+        
+        for i in 0...self.count -1 {
+            for j in 1...self.count -1 {
+                guard areIncreasing(self[i], self[j]) == false else {continue}
+                temporarybox.swapAt(i, j)
+            }
+        }
+        return temporarybox
+    }
+}
+
+</code></pre>
+
