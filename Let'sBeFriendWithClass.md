@@ -1,5 +1,5 @@
 
-# Purpose: needs of experienced about class
+# Purpose: need of experienced about class
 
 ## Let's make game that when i was 12, enjoyment
 
